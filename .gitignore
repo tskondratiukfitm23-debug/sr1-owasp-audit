@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.tokens.env
+hardening/secrets/
+hardening/certs/
+hardening/logs/
+.zaphome/
+*.log

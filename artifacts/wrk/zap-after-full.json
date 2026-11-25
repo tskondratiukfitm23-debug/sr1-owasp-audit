@@ -1,0 +1,2041 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.17.0",
+	"@generated": "Wed, 25 Nov 2026 22:04:22",
+	"created": "2026-11-25T22:04:22.368988190Z",
+	"insights":[
+		{
+			"level": "Medium",
+			"reason": "Exceeded High",
+			"site": "https://localhost:8443",
+			"key": "insight.code.4xx",
+			"description": "Percentage of responses with status code 4xx",
+			"statistic": "50"
+		},
+		{
+			"level": "Low",
+			"reason": "Warning",
+			"site": "",
+			"key": "insight.log.error",
+			"description": "ZAP errors logged - see the zap.log file for details",
+			"statistic": "1"
+		},
+		{
+			"level": "Low",
+			"reason": "Warning",
+			"site": "",
+			"key": "insight.log.warn",
+			"description": "ZAP warnings logged - see the zap.log file for details",
+			"statistic": "17"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://api.github.com",
+			"key": "insight.code.4xx",
+			"description": "Percentage of responses with status code 4xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://api.github.com",
+			"key": "insight.endpoint.ctype.application/json",
+			"description": "Percentage of endpoints with content type application/json",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://api.github.com",
+			"key": "insight.endpoint.method.POST",
+			"description": "Percentage of endpoints with method POST",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://api.github.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://avatars.githubusercontent.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://avatars.githubusercontent.com",
+			"key": "insight.endpoint.ctype.image/jpeg",
+			"description": "Percentage of endpoints with content type image/jpeg",
+			"statistic": "64"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://avatars.githubusercontent.com",
+			"key": "insight.endpoint.ctype.image/png",
+			"description": "Percentage of endpoints with content type image/png",
+			"statistic": "35"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://avatars.githubusercontent.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://avatars.githubusercontent.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "17"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://avatars.githubusercontent.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "5"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "93"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.code.4xx",
+			"description": "Percentage of responses with status code 4xx",
+			"statistic": "6"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.endpoint.ctype.image/svg+xml",
+			"description": "Percentage of endpoints with content type image/svg+xml",
+			"statistic": "93"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.endpoint.ctype.text/plain",
+			"description": "Percentage of endpoints with content type text/plain",
+			"statistic": "6"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "29"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "18"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://collector.github.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://collector.github.com",
+			"key": "insight.endpoint.method.POST",
+			"description": "Percentage of endpoints with method POST",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://collector.github.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "2"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://collector.github.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "92"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.code.3xx",
+			"description": "Percentage of responses with status code 3xx",
+			"statistic": "7"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.endpoint.ctype.application/json",
+			"description": "Percentage of endpoints with content type application/json",
+			"statistic": "61"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.endpoint.ctype.image/png",
+			"description": "Percentage of endpoints with content type image/png",
+			"statistic": "7"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.endpoint.ctype.image/svg+xml",
+			"description": "Percentage of endpoints with content type image/svg+xml",
+			"statistic": "15"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.endpoint.ctype.text/html",
+			"description": "Percentage of endpoints with content type text/html",
+			"statistic": "15"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "13"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "92"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.githubassets.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.githubassets.com",
+			"key": "insight.endpoint.ctype.application/javascript",
+			"description": "Percentage of endpoints with content type application/javascript",
+			"statistic": "72"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.githubassets.com",
+			"key": "insight.endpoint.ctype.image/webp",
+			"description": "Percentage of endpoints with content type image/webp",
+			"statistic": "6"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.githubassets.com",
+			"key": "insight.endpoint.ctype.text/css",
+			"description": "Percentage of endpoints with content type text/css",
+			"statistic": "19"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.githubassets.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.githubassets.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "103"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.code.1xx",
+			"description": "Percentage of responses with status code 1xx",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "47"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.code.3xx",
+			"description": "Percentage of responses with status code 3xx",
+			"statistic": "6"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.code.5xx",
+			"description": "Percentage of responses with status code 5xx",
+			"statistic": "3"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.ctype.application/javascript",
+			"description": "Percentage of endpoints with content type application/javascript",
+			"statistic": "6"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.ctype.application/json",
+			"description": "Percentage of endpoints with content type application/json",
+			"statistic": "13"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.ctype.font/woff",
+			"description": "Percentage of endpoints with content type font/woff",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.ctype.font/woff2",
+			"description": "Percentage of endpoints with content type font/woff2",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.ctype.image/avif",
+			"description": "Percentage of endpoints with content type image/avif",
+			"statistic": "11"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.ctype.image/jpeg",
+			"description": "Percentage of endpoints with content type image/jpeg",
+			"statistic": "20"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.ctype.image/png",
+			"description": "Percentage of endpoints with content type image/png",
+			"statistic": "4"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.ctype.image/svg+xml",
+			"description": "Percentage of endpoints with content type image/svg+xml",
+			"statistic": "31"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.ctype.image/x-icon",
+			"description": "Percentage of endpoints with content type image/x-icon",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.ctype.text/css",
+			"description": "Percentage of endpoints with content type text/css",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.ctype.text/html",
+			"description": "Percentage of endpoints with content type text/html",
+			"statistic": "7"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.ctype.text/plain",
+			"description": "Percentage of endpoints with content type text/plain",
+			"statistic": "2"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "96"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.method.POST",
+			"description": "Percentage of endpoints with method POST",
+			"statistic": "3"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "141"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://localhost:8443",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://raw.githubusercontent.com",
+			"key": "insight.code.4xx",
+			"description": "Percentage of responses with status code 4xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://raw.githubusercontent.com",
+			"key": "insight.endpoint.ctype.text/plain",
+			"description": "Percentage of endpoints with content type text/plain",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://raw.githubusercontent.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://raw.githubusercontent.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "5"
+		}
+	],
+	"site":[ 
+		{
+			"@name": "https://api.github.com",
+			"@host": "api.github.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+			]
+		},
+		{
+			"@name": "https://collector.github.com",
+			"@host": "collector.github.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+			]
+		},
+		{
+			"@name": "https://raw.githubusercontent.com",
+			"@host": "raw.githubusercontent.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+			]
+		},
+		{
+			"@name": "https://avatars.githubusercontent.com",
+			"@host": "avatars.githubusercontent.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+			]
+		},
+		{
+			"@name": "https://camo.githubusercontent.com",
+			"@host": "camo.githubusercontent.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+			]
+		},
+		{
+			"@name": "https://github.githubassets.com",
+			"@host": "github.githubassets.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10098",
+					"alertRef": "10098",
+					"alert": "Cross-Domain Misconfiguration",
+					"name": "Cross-Domain Misconfiguration",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server.</p>",
+					"instances":[ 
+						{
+							"id": "100",
+							"uri": "https://github.githubassets.com/assets/dark_high_contrast-0f67518b61ff9e26.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/dark_high_contrast-0f67518b61ff9e26.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"id": "97",
+							"uri": "https://github.githubassets.com/assets/light-3ee16b3ea60adc77.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/light-3ee16b3ea60adc77.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"id": "95",
+							"uri": "https://github.githubassets.com/assets/light_high_contrast-bb77a780db30c175.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/light_high_contrast-bb77a780db30c175.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"id": "93",
+							"uri": "https://github.githubassets.com/assets/primer-primitives-7b6f781f48ff31c6.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/primer-primitives-7b6f781f48ff31c6.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"id": "99",
+							"uri": "https://github.githubassets.com/assets/react-fa5e2e82e6e0ecc0.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/react-fa5e2e82e6e0ecc0.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p><p>Configure the \"Access-Control-Allow-Origin\" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>",
+					"otherinfo": "<p>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</p>",
+					"reference": "<p>https://vulncat.fortify.com/en/detail?category=HTML5&subcategory=Overly%20Permissive%20CORS%20Policy</p>",
+					"cweid": "264",
+					"wascid": "14",
+					"sourceid": "261"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"id": "109",
+							"uri": "https://github.githubassets.com/assets/react-compiler-runtime-4610bd6d3de9c049.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/react-compiler-runtime-4610bd6d3de9c049.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "104",
+							"uri": "https://github.githubassets.com/assets/react-fa5e2e82e6e0ecc0.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/react-fa5e2e82e6e0ecc0.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "134",
+							"uri": "https://github.githubassets.com/assets/react-is-e0b593954b4706d8.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/react-is-e0b593954b4706d8.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "130",
+							"uri": "https://github.githubassets.com/assets/react-jsx-runtime-4915cb0f5b3aff04.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/react-jsx-runtime-4915cb0f5b3aff04.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "120",
+							"uri": "https://github.githubassets.com/assets/scheduler-58b860b049ca307c.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/scheduler-58b860b049ca307c.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "262"
+				},
+				{
+					"pluginid": "10036",
+					"alertRef": "10036-2",
+					"alert": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+					"name": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.</p>",
+					"instances":[ 
+						{
+							"id": "114",
+							"uri": "https://github.githubassets.com/assets/dark_high_contrast-0f67518b61ff9e26.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/dark_high_contrast-0f67518b61ff9e26.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Windows-Azure-Web/1.0 Microsoft-HTTPAPI/2.0",
+							"otherinfo": ""
+						},
+						{
+							"id": "113",
+							"uri": "https://github.githubassets.com/assets/light_high_contrast-bb77a780db30c175.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/light_high_contrast-bb77a780db30c175.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Windows-Azure-Web/1.0 Microsoft-HTTPAPI/2.0",
+							"otherinfo": ""
+						},
+						{
+							"id": "96",
+							"uri": "https://github.githubassets.com/assets/primer-primitives-7b6f781f48ff31c6.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/primer-primitives-7b6f781f48ff31c6.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Windows-Azure-Web/1.0 Microsoft-HTTPAPI/2.0",
+							"otherinfo": ""
+						},
+						{
+							"id": "107",
+							"uri": "https://github.githubassets.com/assets/react-compiler-runtime-4610bd6d3de9c049.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/react-compiler-runtime-4610bd6d3de9c049.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Windows-Azure-Web/1.0 Microsoft-HTTPAPI/2.0",
+							"otherinfo": ""
+						},
+						{
+							"id": "102",
+							"uri": "https://github.githubassets.com/assets/react-fa5e2e82e6e0ecc0.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/react-fa5e2e82e6e0ecc0.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Windows-Azure-Web/1.0 Microsoft-HTTPAPI/2.0",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress the \"Server\" header or provide generic details.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://httpd.apache.org/docs/current/mod/core.html#servertokens</p><p>https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)</p><p>https://www.troyhunt.com/shhh-dont-let-your-response-headers/</p>",
+					"cweid": "497",
+					"wascid": "13",
+					"sourceid": "261"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[ 
+						{
+							"id": "121",
+							"uri": "https://github.githubassets.com/assets/light_high_contrast-bb77a780db30c175.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/light_high_contrast-bb77a780db30c175.css",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"id": "98",
+							"uri": "https://github.githubassets.com/assets/primer-primitives-7b6f781f48ff31c6.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/primer-primitives-7b6f781f48ff31c6.css",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"id": "108",
+							"uri": "https://github.githubassets.com/assets/react-compiler-runtime-4610bd6d3de9c049.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/react-compiler-runtime-4610bd6d3de9c049.js",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"id": "103",
+							"uri": "https://github.githubassets.com/assets/react-fa5e2e82e6e0ecc0.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/react-fa5e2e82e6e0ecc0.js",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"id": "119",
+							"uri": "https://github.githubassets.com/assets/scheduler-58b860b049ca307c.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/scheduler-58b860b049ca307c.js",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "259"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker.</p>",
+					"instances":[ 
+						{
+							"id": "261",
+							"uri": "https://github.githubassets.com/assets/chunk-lazy-element-select-panel-5596686398b1435b.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/chunk-lazy-element-select-panel-5596686398b1435b.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "=chunk-lazy-element-select-panel-5596686398b14",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in likely comment: \"//# sourceMappingURL=chunk-lazy-element-select-panel-5596686398b1435b-ef3a4c6de17d62d1.js.map\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bSELECT\\b and was detected in likely comment: \"//# sourceMappingURL=chunk-lazy-element-select-panel-5596686398b1435b-ef3a4c6de17d62d1.js.map\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "615",
+					"wascid": "13",
+					"sourceid": "354"
+				},
+				{
+					"pluginid": "10050",
+					"alertRef": "10050-1",
+					"alert": "Retrieved from Cache",
+					"name": "Retrieved from Cache",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"id": "111",
+							"uri": "https://github.githubassets.com/assets/dark_high_contrast-0f67518b61ff9e26.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/dark_high_contrast-0f67518b61ff9e26.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"id": "110",
+							"uri": "https://github.githubassets.com/assets/light_high_contrast-bb77a780db30c175.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/light_high_contrast-bb77a780db30c175.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"id": "94",
+							"uri": "https://github.githubassets.com/assets/primer-primitives-7b6f781f48ff31c6.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/primer-primitives-7b6f781f48ff31c6.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"id": "106",
+							"uri": "https://github.githubassets.com/assets/react-compiler-runtime-4610bd6d3de9c049.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/react-compiler-runtime-4610bd6d3de9c049.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"id": "101",
+							"uri": "https://github.githubassets.com/assets/react-fa5e2e82e6e0ecc0.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/react-fa5e2e82e6e0ecc0.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.rfc-editor.org/rfc/rfc9110.html</p>",
+					"cweid": "525",
+					"wascid": "-1",
+					"sourceid": "261"
+				}
+			]
+		},
+		{
+			"@name": "https://github.com",
+			"@host": "github.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "90003",
+					"alertRef": "90003",
+					"alert": "Sub Resource Integrity Attribute Missing",
+					"name": "Sub Resource Integrity Attribute Missing",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content.</p>",
+					"instances":[ 
+						{
+							"id": "152",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link crossorigin=\"anonymous\" rel=\"modulepreload\" href=\"https://github.githubassets.com/assets/react-compiler-runtime-4610bd6d3de9c049.js\" />",
+							"otherinfo": ""
+						},
+						{
+							"id": "154",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link crossorigin=\"anonymous\" rel=\"modulepreload\" href=\"https://github.githubassets.com/assets/react-dom-c7f52540bb6b77ed.js\" />",
+							"otherinfo": ""
+						},
+						{
+							"id": "155",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link crossorigin=\"anonymous\" rel=\"modulepreload\" href=\"https://github.githubassets.com/assets/react-dom-client-35b308126995de85.js\" />",
+							"otherinfo": ""
+						},
+						{
+							"id": "151",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link crossorigin=\"anonymous\" rel=\"modulepreload\" href=\"https://github.githubassets.com/assets/react-fa5e2e82e6e0ecc0.js\" />",
+							"otherinfo": ""
+						},
+						{
+							"id": "153",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link crossorigin=\"anonymous\" rel=\"modulepreload\" href=\"https://github.githubassets.com/assets/scheduler-58b860b049ca307c.js\" />",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Subresource_Integrity</p>",
+					"cweid": "345",
+					"wascid": "15",
+					"sourceid": "252"
+				},
+				{
+					"pluginid": "10010",
+					"alertRef": "10010",
+					"alert": "Cookie No HttpOnly Flag",
+					"name": "Cookie No HttpOnly Flag",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.</p>",
+					"instances":[ 
+						{
+							"id": "141",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "_octo",
+							"attack": "",
+							"evidence": "Set-Cookie: _octo",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Ensure that the HttpOnly flag is set for all cookies.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-community/HttpOnly</p>",
+					"cweid": "1004",
+					"wascid": "13",
+					"sourceid": "252"
+				},
+				{
+					"pluginid": "10017",
+					"alertRef": "10017",
+					"alert": "Cross-Domain JavaScript Source File Inclusion",
+					"name": "Cross-Domain JavaScript Source File Inclusion",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
+					"instances":[ 
+						{
+							"id": "147",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "https://github.githubassets.com/assets/code-menu-1e43c63f69955446.js",
+							"attack": "",
+							"evidence": "<script crossorigin=\"anonymous\" type=\"module\" src=\"https://github.githubassets.com/assets/code-menu-1e43c63f69955446.js\" defer=\"defer\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"id": "145",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "https://github.githubassets.com/assets/codespaces-ee7cef1692711719.js",
+							"attack": "",
+							"evidence": "<script crossorigin=\"anonymous\" type=\"module\" src=\"https://github.githubassets.com/assets/codespaces-ee7cef1692711719.js\" defer=\"defer\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"id": "144",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "https://github.githubassets.com/assets/core-42e49706d9b9a51d.js",
+							"attack": "",
+							"evidence": "<script crossorigin=\"anonymous\" type=\"module\" src=\"https://github.githubassets.com/assets/core-42e49706d9b9a51d.js\" defer=\"defer\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"id": "143",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "https://github.githubassets.com/assets/high-contrast-cookie-377d02d81834cc55.js",
+							"attack": "",
+							"evidence": "<script crossorigin=\"anonymous\" type=\"module\" src=\"https://github.githubassets.com/assets/high-contrast-cookie-377d02d81834cc55.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"id": "146",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "https://github.githubassets.com/assets/repositories-5126bd8efa91caa4.js",
+							"attack": "",
+							"evidence": "<script crossorigin=\"anonymous\" type=\"module\" src=\"https://github.githubassets.com/assets/repositories-5126bd8efa91caa4.js\" defer=\"defer\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "829",
+					"wascid": "15",
+					"sourceid": "252"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-1",
+					"alert": "Permissions Policy Header Not Set",
+					"name": "Permissions Policy Header Not Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"instances":[ 
+						{
+							"id": "249",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"systemic": true,
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "252"
+				},
+				{
+					"pluginid": "2",
+					"alertRef": "2",
+					"alert": "Private IP Disclosure",
+					"name": "Private IP Disclosure",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A private IP (such as 10.x.x.x, 172.x.x.x, 192.168.x.x) or an Amazon EC2 private hostname (for example, ip-10-0-56-78) has been found in the HTTP response body. This information might be helpful for further attacks targeting internal systems.</p>",
+					"instances":[ 
+						{
+							"id": "149",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "192.168.99.100:3000",
+							"otherinfo": "192.168.99.100:3000\n192.168.99.100:3000\n192.168.56.110\n192.168.99.100:3000\n192.168.99.100:3000\n192.168.56.110\n192.168.56.110\n"
+						},
+						{
+							"id": "262",
+							"uri": "https://github.com/juice-shop/juice-shop/overview-files/master",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop\/overview-files\/master",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "192.168.99.100:3000",
+							"otherinfo": "192.168.99.100:3000\n192.168.99.100:3000\n192.168.56.110\n192.168.56.110\n"
+						}
+					],
+					"count": "2",
+					"systemic": false,
+					"solution": "<p>Remove the private IP address from the HTTP response body. For comments, use JSP/ASP/PHP comment instead of HTML/JavaScript comment which can be seen by client browsers.</p>",
+					"otherinfo": "<p>192.168.99.100:3000</p><p>192.168.99.100:3000</p><p>192.168.56.110</p><p>192.168.99.100:3000</p><p>192.168.99.100:3000</p><p>192.168.56.110</p><p>192.168.56.110</p><p></p>",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc1918</p>",
+					"cweid": "497",
+					"wascid": "13",
+					"sourceid": "252"
+				},
+				{
+					"pluginid": "120000",
+					"alertRef": "120000-1",
+					"alert": "Information Disclosure - Information in Browser localStorage",
+					"name": "Information Disclosure - Information in Browser localStorage",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Information was stored in browser localStorage.</p><p>This is not unusual or necessarily unsafe - this informational alert has been raised to help you get a better understanding of what this app is doing. For more details see the Client tabs - this information was set directly in the browser and will therefore not necessarily appear in this form in any HTTP(S) messages.</p>",
+					"instances":[ 
+						{
+							"id": "258",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "offline_cache_last_cleanup::offline_cache_v2::undefined::queries",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "The following data (key=value) was set: offline_cache_last_cleanup::offline_cache_v2::undefined::queries=1795643616882\nNote that this alert will only be raised once for each URL + key."
+						},
+						{
+							"id": "257",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "offline_cache_schema_first_seen::offline_cache_v2::",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "The following data (key=value) was set: offline_cache_schema_first_seen::offline_cache_v2::=1795643616878\nNote that this alert will only be raised once for each URL + key."
+						},
+						{
+							"id": "255",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "ref-selector:juice-shop/juice-shop:branch",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "The following data (key=value) was set: ref-selector:juice-shop/juice-shop:branch={\"refs\":[\"master\",\"chore/dependency-cleanup\",\"copilot/fix-api-test-macos-latest\",\"copilot/review-pr-3701\",\"create-pull-request/patch\",\"develop\",\"feat/package-json-merge\",\"feature/passkey-webauthn\",\"gh-pages\",\"l10n_develop\",\"m2-theme/neon-cyberpunk\",\"mixed-stuff\"],\"cacheKey\":\"v0:1795359121.0\"}\nNote that this alert will only be raised once for each URL + key."
+						}
+					],
+					"count": "3",
+					"systemic": false,
+					"solution": "<p>This is an informational alert and no action is necessary. </p>",
+					"otherinfo": "<p>The following data (key=value) was set: offline_cache_last_cleanup::offline_cache_v2::undefined::queries=1795643616882</p><p>Note that this alert will only be raised once for each URL + key.</p>",
+					"reference": "",
+					"cweid": "359",
+					"wascid": "13",
+					"sourceid": "558"
+				},
+				{
+					"pluginid": "120000",
+					"alertRef": "120000-2",
+					"alert": "Information Disclosure - Information in Browser sessionStorage",
+					"name": "Information Disclosure - Information in Browser sessionStorage",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Information was stored in browser sessionStorage.</p><p>This is not unusual or necessarily unsafe - this informational alert has been raised to help you get a better understanding of what this app is doing. For more details see the Client tabs - this information was set directly in the browser and will therefore not necessarily appear in this form in any HTTP(S) messages.</p>",
+					"instances":[ 
+						{
+							"id": "254",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "soft-nav:marker",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "The following data (key=value) was set: soft-nav:marker=0\nNote that this alert will only be raised once for each URL + key."
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>This is an informational alert and no action is necessary. </p>",
+					"otherinfo": "<p>The following data (key=value) was set: soft-nav:marker=0</p><p>Note that this alert will only be raised once for each URL + key.</p>",
+					"reference": "",
+					"cweid": "359",
+					"wascid": "13",
+					"sourceid": "507"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Client Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"id": "150",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a class=\"Link--inTextBlock\" href=\"\">Reload</a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "252"
+				}
+			]
+		},
+		{
+			"@name": "https://localhost:8443",
+			"@host": "localhost",
+			"@port": "8443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10028",
+					"alertRef": "10028",
+					"alert": "Off-site Redirect",
+					"name": "Off-site Redirect",
+					"riskcode": "3",
+					"confidence": "2",
+					"riskdesc": "High (Medium)",
+					"desc": "<p>Open redirects are one of the OWASP 2010 Top Ten vulnerabilities. This check looks at user-supplied input in query string parameters and POST data to identify where open redirects might be possible. Open redirects occur when an application allows user-supplied input (e.g. https://nottrusted.com) to control an off-site destination. This is generally a pretty accurate way to find where 301 or 302 redirects could be exploited by spammers or phishing attacks.</p><p></p><p>For example an attacker could supply a user with the following link: https://example.com/example.php?url=https://malicious.example.com.</p><p></p><p>NOTE: For the purposes of the passive check the authority portion of the origin and destination were compared. Manual testing may be required to validate the impact of this finding.</p>",
+					"instances":[ 
+						{
+							"id": "92",
+							"uri": "https://localhost:8443/redirect?to=https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/localhost:8443\/redirect (to)",
+							"method": "GET",
+							"param": "to",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "The 301 or 302 response to a request for the following URL appeared to contain user input in the location header:\n\nhttps://localhost:8443/redirect?to=https://github.com/juice-shop/juice-shop\n\nThe user input found was:\n\nto=https://github.com/juice-shop/juice-shop\n\nThe context was:\n\nhttps://github.com/juice-shop/juice-shop"
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>To avoid the open redirect vulnerability, parameters of the application script/program must be validated before sending 302 HTTP code (redirect) to the client browser. Implement safe redirect functionality that only redirects to relative URI's, or a list of trusted domains.</p>",
+					"otherinfo": "<p>The 301 or 302 response to a request for the following URL appeared to contain user input in the location header:</p><p></p><p>https://localhost:8443/redirect?to=https://github.com/juice-shop/juice-shop</p><p></p><p>The user input found was:</p><p></p><p>to=https://github.com/juice-shop/juice-shop</p><p></p><p>The context was:</p><p></p><p>https://github.com/juice-shop/juice-shop</p>",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html</p><p>https://cwe.mitre.org/data/definitions/601.html</p>",
+					"cweid": "601",
+					"wascid": "38",
+					"sourceid": "240"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-6",
+					"alert": "CSP: style-src unsafe-inline",
+					"name": "CSP: style-src unsafe-inline",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"id": "18",
+							"uri": "https://localhost:8443",
+							"nodeName": "https:\/\/localhost:8443",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'sha256-2ADpmZIga9zdrCfzZ7IWyavasltpcKCkxomklfMTCG0=' 'sha256-LMY6wYoFV9I4wWzxaq1N/dTpl4iurQktw706UCHK3vM='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' wss://localhost:8443; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"id": "1",
+							"uri": "https://localhost:8443/",
+							"nodeName": "https:\/\/localhost:8443\/",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'sha256-2ADpmZIga9zdrCfzZ7IWyavasltpcKCkxomklfMTCG0=' 'sha256-LMY6wYoFV9I4wWzxaq1N/dTpl4iurQktw706UCHK3vM='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' wss://localhost:8443; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"id": "15",
+							"uri": "https://localhost:8443/sitemap.xml",
+							"nodeName": "https:\/\/localhost:8443\/sitemap.xml",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'sha256-2ADpmZIga9zdrCfzZ7IWyavasltpcKCkxomklfMTCG0=' 'sha256-LMY6wYoFV9I4wWzxaq1N/dTpl4iurQktw706UCHK3vM='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' wss://localhost:8443; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"id": "45",
+							"uri": "https://localhost:8443/socket.io/?EIO=4&transport=polling&t=nu3ughby&sid=ZyOTEb8jrmxcyBijAAAA",
+							"nodeName": "https:\/\/localhost:8443\/socket.io\/ (EIO,sid,t,transport)(40)",
+							"method": "POST",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'sha256-2ADpmZIga9zdrCfzZ7IWyavasltpcKCkxomklfMTCG0=' 'sha256-LMY6wYoFV9I4wWzxaq1N/dTpl4iurQktw706UCHK3vM='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' wss://localhost:8443; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"id": "53",
+							"uri": "https://localhost:8443/socket.io/?EIO=4&transport=polling&t=nu3we9j1&sid=ZyOTEb8jrmxcyBijAAAA",
+							"nodeName": "https:\/\/localhost:8443\/socket.io\/ (EIO,sid,t,transport)(42[\"notification received\",\"ff4aebffe31b...)",
+							"method": "POST",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'sha256-2ADpmZIga9zdrCfzZ7IWyavasltpcKCkxomklfMTCG0=' 'sha256-LMY6wYoFV9I4wWzxaq1N/dTpl4iurQktw706UCHK3vM='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' wss://localhost:8443; frame-src 'none'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self'",
+							"otherinfo": "style-src includes unsafe-inline."
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>style-src includes unsafe-inline.</p>",
+					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://web.dev/articles/csp#resource-options</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "3",
+					"alertRef": "3-1",
+					"alert": "Session ID in URL Rewrite",
+					"name": "Session ID in URL Rewrite",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>URL rewrite is used to track user session ID. The session ID may be disclosed via cross-site referer header. In addition, the session ID might be stored in browser history or server logs.</p>",
+					"instances":[ 
+						{
+							"id": "48",
+							"uri": "https://localhost:8443/socket.io/?EIO=4&transport=polling&t=nu3uhcev&sid=ZyOTEb8jrmxcyBijAAAA",
+							"nodeName": "https:\/\/localhost:8443\/socket.io\/ (EIO,sid,t,transport)",
+							"method": "GET",
+							"param": "sid",
+							"attack": "",
+							"evidence": "ZyOTEb8jrmxcyBijAAAA",
+							"otherinfo": ""
+						},
+						{
+							"id": "49",
+							"uri": "https://localhost:8443/socket.io/?EIO=4&transport=websocket&sid=ZyOTEb8jrmxcyBijAAAA",
+							"nodeName": "https:\/\/localhost:8443\/socket.io\/ (EIO,sid,transport)",
+							"method": "GET",
+							"param": "sid",
+							"attack": "",
+							"evidence": "ZyOTEb8jrmxcyBijAAAA",
+							"otherinfo": ""
+						},
+						{
+							"id": "46",
+							"uri": "https://localhost:8443/socket.io/?EIO=4&transport=polling&t=nu3ughby&sid=ZyOTEb8jrmxcyBijAAAA",
+							"nodeName": "https:\/\/localhost:8443\/socket.io\/ (EIO,sid,t,transport)(40)",
+							"method": "POST",
+							"param": "sid",
+							"attack": "",
+							"evidence": "ZyOTEb8jrmxcyBijAAAA",
+							"otherinfo": ""
+						},
+						{
+							"id": "56",
+							"uri": "https://localhost:8443/socket.io/?EIO=4&transport=polling&t=nu3x7tbk&sid=ZyOTEb8jrmxcyBijAAAA",
+							"nodeName": "https:\/\/localhost:8443\/socket.io\/ (EIO,sid,t,transport)(42[\"notification received\",\"690fa3247a99...)",
+							"method": "POST",
+							"param": "sid",
+							"attack": "",
+							"evidence": "ZyOTEb8jrmxcyBijAAAA",
+							"otherinfo": ""
+						},
+						{
+							"id": "54",
+							"uri": "https://localhost:8443/socket.io/?EIO=4&transport=polling&t=nu3we9j1&sid=ZyOTEb8jrmxcyBijAAAA",
+							"nodeName": "https:\/\/localhost:8443\/socket.io\/ (EIO,sid,t,transport)(42[\"notification received\",\"ff4aebffe31b...)",
+							"method": "POST",
+							"param": "sid",
+							"attack": "",
+							"evidence": "ZyOTEb8jrmxcyBijAAAA",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>For secure content, put session ID in a cookie. To be even more secure consider using a combination of cookie and URL rewrite.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://seclists.org/webappsec/2002/q4/111</p>",
+					"cweid": "598",
+					"wascid": "13",
+					"sourceid": "53"
+				},
+				{
+					"pluginid": "90004",
+					"alertRef": "90004-2",
+					"alert": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+					"name": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Cross-Origin-Embedder-Policy header is a response header that prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (using CORP or CORS).</p>",
+					"instances":[ 
+						{
+							"id": "34",
+							"uri": "https://localhost:8443",
+							"nodeName": "https:\/\/localhost:8443",
+							"method": "GET",
+							"param": "Cross-Origin-Embedder-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "5",
+							"uri": "https://localhost:8443/",
+							"nodeName": "https:\/\/localhost:8443\/",
+							"method": "GET",
+							"param": "Cross-Origin-Embedder-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "25",
+							"uri": "https://localhost:8443/sitemap.xml",
+							"nodeName": "https:\/\/localhost:8443\/sitemap.xml",
+							"method": "GET",
+							"param": "Cross-Origin-Embedder-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"systemic": false,
+					"solution": "<p>Ensure that the application/web server sets the Cross-Origin-Embedder-Policy header appropriately, and that it sets the Cross-Origin-Embedder-Policy header to 'require-corp' for documents.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Embedder-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy).</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy</p>",
+					"cweid": "693",
+					"wascid": "14",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "90004",
+					"alertRef": "90004-1",
+					"alert": "Cross-Origin-Resource-Policy Header Missing or Invalid",
+					"name": "Cross-Origin-Resource-Policy Header Missing or Invalid",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Cross-Origin-Resource-Policy header is an opt-in header designed to counter side-channels attacks like Spectre. Resource should be specifically set as shareable amongst different origins.</p>",
+					"instances":[ 
+						{
+							"id": "4",
+							"uri": "https://localhost:8443/",
+							"nodeName": "https:\/\/localhost:8443\/",
+							"method": "GET",
+							"param": "Cross-Origin-Resource-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "8",
+							"uri": "https://localhost:8443/assets/public/favicon_js.ico",
+							"nodeName": "https:\/\/localhost:8443\/assets\/public\/favicon_js.ico",
+							"method": "GET",
+							"param": "Cross-Origin-Resource-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "20",
+							"uri": "https://localhost:8443/chunk-CE5v8pBj.js",
+							"nodeName": "https:\/\/localhost:8443\/chunk-CE5v8pBj.js",
+							"method": "GET",
+							"param": "Cross-Origin-Resource-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "13",
+							"uri": "https://localhost:8443/robots.txt",
+							"nodeName": "https:\/\/localhost:8443\/robots.txt",
+							"method": "GET",
+							"param": "Cross-Origin-Resource-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "9",
+							"uri": "https://localhost:8443/rolldown-runtime-kqx1xuJ_.js",
+							"nodeName": "https:\/\/localhost:8443\/rolldown-runtime-kqx1xuJ_.js",
+							"method": "GET",
+							"param": "Cross-Origin-Resource-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that the application/web server sets the Cross-Origin-Resource-Policy header appropriately, and that it sets the Cross-Origin-Resource-Policy header to 'same-origin' for all web pages.</p><p>'same-site' is considered as less secured and should be avoided.</p><p>If resources must be shared, set the header to 'cross-origin'.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Resource-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-resource-policy).</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy</p>",
+					"cweid": "693",
+					"wascid": "14",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10110",
+					"alertRef": "10110",
+					"alert": "Dangerous JS Functions",
+					"name": "Dangerous JS Functions",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+					"instances":[ 
+						{
+							"id": "264",
+							"uri": "https://localhost:8443/about.component-HWmrgSem.js",
+							"nodeName": "https:\/\/localhost:8443\/about.component-HWmrgSem.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bypassSecurityTrustHtml(",
+							"otherinfo": ""
+						},
+						{
+							"id": "38",
+							"uri": "https://localhost:8443/chunk-3CyVWL1v.js",
+							"nodeName": "https:\/\/localhost:8443\/chunk-3CyVWL1v.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bypassSecurityTrustHtml(",
+							"otherinfo": ""
+						},
+						{
+							"id": "39",
+							"uri": "https://localhost:8443/main.js",
+							"nodeName": "https:\/\/localhost:8443\/main.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bypassSecurityTrustHtml(",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"systemic": false,
+					"solution": "<p>See the references for security advice on the use of these functions.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://v17.angular.io/guide/security</p>",
+					"cweid": "749",
+					"wascid": "-1",
+					"sourceid": "477"
+				},
+				{
+					"pluginid": "2",
+					"alertRef": "2",
+					"alert": "Private IP Disclosure",
+					"name": "Private IP Disclosure",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A private IP (such as 10.x.x.x, 172.x.x.x, 192.168.x.x) or an Amazon EC2 private hostname (for example, ip-10-0-56-78) has been found in the HTTP response body. This information might be helpful for further attacks targeting internal systems.</p>",
+					"instances":[ 
+						{
+							"id": "57",
+							"uri": "https://localhost:8443/rest/admin/application-configuration",
+							"nodeName": "https:\/\/localhost:8443\/rest\/admin\/application-configuration",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "192.168.99.100:3000",
+							"otherinfo": "192.168.99.100:3000\n192.168.99.100:4200\n"
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Remove the private IP address from the HTTP response body. For comments, use JSP/ASP/PHP comment instead of HTML/JavaScript comment which can be seen by client browsers.</p>",
+					"otherinfo": "<p>192.168.99.100:3000</p><p>192.168.99.100:4200</p><p></p>",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc1918</p>",
+					"cweid": "497",
+					"wascid": "13",
+					"sourceid": "47"
+				},
+				{
+					"pluginid": "10096",
+					"alertRef": "10096",
+					"alert": "Timestamp Disclosure - Unix",
+					"name": "Timestamp Disclosure - Unix",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A timestamp was disclosed by the application/web server. - Unix</p>",
+					"instances":[ 
+						{
+							"id": "61",
+							"uri": "https://localhost:8443/rest/admin/application-configuration",
+							"nodeName": "https:\/\/localhost:8443\/rest\/admin\/application-configuration",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1969196030",
+							"otherinfo": "1969196030, which evaluates to: 2032-05-26 14:53:50."
+						},
+						{
+							"id": "62",
+							"uri": "https://localhost:8443/rest/admin/application-configuration",
+							"nodeName": "https:\/\/localhost:8443\/rest\/admin\/application-configuration",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1970691216",
+							"otherinfo": "1970691216, which evaluates to: 2032-06-12 22:13:36."
+						},
+						{
+							"id": "60",
+							"uri": "https://localhost:8443/rest/products/search?q=",
+							"nodeName": "https:\/\/localhost:8443\/rest\/products\/search (q)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1969196030",
+							"otherinfo": "1969196030, which evaluates to: 2032-05-26 14:53:50."
+						},
+						{
+							"id": "59",
+							"uri": "https://localhost:8443/rest/products/search?q=",
+							"nodeName": "https:\/\/localhost:8443\/rest\/products\/search (q)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1970691216",
+							"otherinfo": "1970691216, which evaluates to: 2032-06-12 22:13:36."
+						}
+					],
+					"count": "4",
+					"systemic": false,
+					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
+					"otherinfo": "<p>1969196030, which evaluates to: 2032-05-26 14:53:50.</p>",
+					"reference": "<p>https://cwe.mitre.org/data/definitions/200.html</p>",
+					"cweid": "497",
+					"wascid": "13",
+					"sourceid": "47"
+				},
+				{
+					"pluginid": "120000",
+					"alertRef": "120000-2",
+					"alert": "Information Disclosure - Information in Browser sessionStorage",
+					"name": "Information Disclosure - Information in Browser sessionStorage",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Information was stored in browser sessionStorage.</p><p>This is not unusual or necessarily unsafe - this informational alert has been raised to help you get a better understanding of what this app is doing. For more details see the Client tabs - this information was set directly in the browser and will therefore not necessarily appear in this form in any HTTP(S) messages.</p>",
+					"instances":[ 
+						{
+							"id": "260",
+							"uri": "https://localhost:8443/#/basket",
+							"nodeName": "https:\/\/localhost:8443\/",
+							"method": "GET",
+							"param": "itemTotal",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "The following data (key=value) was set: itemTotal=0\nNote that this alert will only be raised once for each URL + key."
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>This is an informational alert and no action is necessary. </p>",
+					"otherinfo": "<p>The following data (key=value) was set: itemTotal=0</p><p>Note that this alert will only be raised once for each URL + key.</p>",
+					"reference": "",
+					"cweid": "359",
+					"wascid": "13",
+					"sourceid": "193"
+				},
+				{
+					"pluginid": "10024",
+					"alertRef": "10024",
+					"alert": "Information Disclosure - Sensitive Information in URL",
+					"name": "Information Disclosure - Sensitive Information in URL",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The request appeared to contain sensitive information leaked in the URL. This can violate PCI and most organizational compliance policies. You can configure the list of strings for this check to add or remove values specific to your environment.</p>",
+					"instances":[ 
+						{
+							"id": "268",
+							"uri": "https://localhost:8443/rest/user/security-question?email=foo-bar@example.com",
+							"nodeName": "https:\/\/localhost:8443\/rest\/user\/security-question (email)",
+							"method": "GET",
+							"param": "email",
+							"attack": "",
+							"evidence": "foo-bar@example.com",
+							"otherinfo": "The URL contains email address(es)."
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Do not pass sensitive information in URIs.</p>",
+					"otherinfo": "<p>The URL contains email address(es).</p>",
+					"reference": "",
+					"cweid": "598",
+					"wascid": "13",
+					"sourceid": "736"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Client Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"id": "27",
+							"uri": "https://localhost:8443",
+							"nodeName": "https:\/\/localhost:8443",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"var(--theme-primary)\", \"text\": \"var(--theme-text)\" },\n          \"button\": { \"background\": \"var(--theme-accent)\", \"text\": \"var(--theme-text)\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"id": "2",
+							"uri": "https://localhost:8443/",
+							"nodeName": "https:\/\/localhost:8443\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"var(--theme-primary)\", \"text\": \"var(--theme-text)\" },\n          \"button\": { \"background\": \"var(--theme-accent)\", \"text\": \"var(--theme-text)\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"id": "263",
+							"uri": "https://localhost:8443/assets/public/images/uploads/%E1%93%9A%E1%98%8F%E1%97%A2-",
+							"nodeName": "https:\/\/localhost:8443\/assets\/public\/images\/uploads\/\u14DA\u160F\u15E2-",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"var(--theme-primary)\", \"text\": \"var(--theme-text)\" },\n          \"button\": { \"background\": \"var(--theme-accent)\", \"text\": \"var(--theme-text)\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"id": "22",
+							"uri": "https://localhost:8443/sitemap.xml",
+							"nodeName": "https:\/\/localhost:8443\/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script>\n    window.addEventListener(\"load\", function(){\n      window.cookieconsent.initialise({\n        \"palette\": {\n          \"popup\": { \"background\": \"var(--theme-primary)\", \"text\": \"var(--theme-text)\" },\n          \"button\": { \"background\": \"var(--theme-accent)\", \"text\": \"var(--theme-text)\" }\n        },\n        \"theme\": \"classic\",\n        \"position\": \"bottom-right\",\n        \"content\": { \"message\": \"This website uses fruit cookies to ensure you get the juiciest tracking experience.\", \"dismiss\": \"Me want it!\", \"link\": \"But me wait!\", \"href\": \"https://www.youtube.com/watch?v=9PnbKL3wuH4\" }\n      })});\n  </script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "4",
+					"systemic": false,
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>No links have been found while there are scripts, which is an indication that this is a modern web application.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049-1",
+					"alert": "Non-Storable Content",
+					"name": "Non-Storable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p>",
+					"instances":[ 
+						{
+							"id": "11",
+							"uri": "https://localhost:8443/ftp",
+							"nodeName": "https:\/\/localhost:8443\/ftp",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "authorization:",
+							"otherinfo": ""
+						},
+						{
+							"id": "12",
+							"uri": "https://localhost:8443/robots.txt",
+							"nodeName": "https:\/\/localhost:8443\/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "authorization:",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"systemic": false,
+					"solution": "<p>The content may be marked as storable by ensuring that the following conditions are satisfied:</p><p>The request method must be understood by the cache and defined as being cacheable (\"GET\", \"HEAD\", and \"POST\" are currently defined as cacheable)</p><p>The response status code must be understood by the cache (one of the 1XX, 2XX, 3XX, 4XX, or 5XX response classes are generally understood)</p><p>The \"no-store\" cache directive must not appear in the request or response header fields</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"private\" response directive must not appear in the response</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"Authorization\" header field must not appear in the request, unless the response explicitly allows it (using one of the \"must-revalidate\", \"public\", or \"s-maxage\" Cache-Control response directives)</p><p>In addition to the conditions above, at least one of the following conditions must also be satisfied by the response:</p><p>It must contain an \"Expires\" header field</p><p>It must contain a \"max-age\" response directive</p><p>For \"shared\" caches such as \"proxy\" caches, it must contain a \"s-maxage\" response directive</p><p>It must contain a \"Cache Control Extension\" that allows it to be cached</p><p>It must have a status code that is defined as cacheable by default (200, 203, 204, 206, 300, 301, 404, 405, 410, 414, 501).</p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "15"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"id": "16",
+							"uri": "https://localhost:8443",
+							"nodeName": "https:\/\/localhost:8443",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"id": "0",
+							"uri": "https://localhost:8443/",
+							"nodeName": "https:\/\/localhost:8443\/",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"id": "10",
+							"uri": "https://localhost:8443/robots.txt",
+							"nodeName": "https:\/\/localhost:8443\/robots.txt",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "14",
+							"uri": "https://localhost:8443/sitemap.xml",
+							"nodeName": "https:\/\/localhost:8443\/sitemap.xml",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"id": "43",
+							"uri": "https://localhost:8443/socket.io/?EIO=4&transport=polling&t=nu3sbjja",
+							"nodeName": "https:\/\/localhost:8443\/socket.io\/ (EIO,t,transport)",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "no-store",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049-2",
+					"alert": "Storable but Non-Cacheable Content",
+					"name": "Storable but Non-Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users.</p>",
+					"instances":[ 
+						{
+							"id": "3",
+							"uri": "https://localhost:8443/",
+							"nodeName": "https:\/\/localhost:8443\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"id": "6",
+							"uri": "https://localhost:8443/assets/public/favicon_js.ico",
+							"nodeName": "https:\/\/localhost:8443\/assets\/public\/favicon_js.ico",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"id": "17",
+							"uri": "https://localhost:8443/chunk-CE5v8pBj.js",
+							"nodeName": "https:\/\/localhost:8443\/chunk-CE5v8pBj.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"id": "7",
+							"uri": "https://localhost:8443/rolldown-runtime-kqx1xuJ_.js",
+							"nodeName": "https:\/\/localhost:8443\/rolldown-runtime-kqx1xuJ_.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"id": "23",
+							"uri": "https://localhost:8443/sitemap.xml",
+							"nodeName": "https:\/\/localhost:8443\/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "1"
+				}
+			]
+		}
+	],
+	"sequences":[
+	]
+
+}

@@ -1,0 +1,124 @@
+{
+ "target": "http://localhost:3000",
+ "time": "2026-11-25 21:48:59",
+ "results": [
+  {
+   "id": "F-01",
+   "owasp": "A05:2025",
+   "title": "SQL-ін'єкція у вході (email=' OR 1=1--)",
+   "status": "VULNERABLE",
+   "evidence": "HTTP 200; увійшли як admin@juice-sh.op"
+  },
+  {
+   "id": "F-02",
+   "owasp": "A05:2025",
+   "title": "UNION SQLi у /rest/products/search (витік облікових записів)",
+   "status": "VULNERABLE",
+   "evidence": "HTTP 200; отримано 27 e-mail та хешів паролів з таблиці Users"
+  },
+  {
+   "id": "F-03",
+   "owasp": "A10:2025",
+   "title": "Витік деталей винятку (SQL/стек) у відповіді",
+   "status": "VULNERABLE",
+   "evidence": "HTTP 500; у тілі видно SQLITE_ERROR/стек"
+  },
+  {
+   "id": "F-04",
+   "owasp": "A01:2025",
+   "title": "IDOR: користувач A читає кошик користувача B",
+   "status": "VULNERABLE",
+   "evidence": "GET /rest/basket/8 з токеном A → HTTP 200"
+  },
+  {
+   "id": "F-05",
+   "owasp": "A01:2025",
+   "title": "Покупець отримує список усіх користувачів (/api/Users)",
+   "status": "VULNERABLE",
+   "evidence": "HTTP 200; записів: 27"
+  },
+  {
+   "id": "F-06",
+   "owasp": "A04:2025",
+   "title": "JWT містить хеш пароля (MD5) у payload",
+   "status": "VULNERABLE",
+   "evidence": "поле data.password присутнє (значення приховано), довжина 32 hex = MD5"
+  },
+  {
+   "id": "F-07",
+   "owasp": "A07:2025",
+   "title": "Підбір пароля: 30 невдалих спроб поспіль",
+   "status": "VULNERABLE",
+   "evidence": "401: 30, 429: 0, інші: 0"
+  },
+  {
+   "id": "F-08",
+   "owasp": "A02:2025",
+   "title": "Лістинг /ftp та доступ до acquisitions.md",
+   "status": "VULNERABLE",
+   "evidence": "/ftp → 200; /ftp/acquisitions.md → 200"
+  },
+  {
+   "id": "F-09",
+   "owasp": "A02:2025",
+   "title": "Публічні службові ендпоінти (логи, метрики, API-docs, ключі)",
+   "status": "VULNERABLE",
+   "evidence": "/support/logs→200, /metrics→200, /api-docs/→200, /encryptionkeys→200"
+  },
+  {
+   "id": "F-10",
+   "owasp": "A02:2025",
+   "title": "Відсутні заголовки безпеки / CORS *",
+   "status": "VULNERABLE",
+   "evidence": "немає: Content-Security-Policy, Strict-Transport-Security, Referrer-Policy; ACAO: *; HTTPS: False"
+  },
+  {
+   "id": "F-11",
+   "owasp": "A01:2025",
+   "title": "SSRF: сервер звертається на внутрішню адресу 127.0.0.1",
+   "status": "VULNERABLE",
+   "evidence": "HTTP 302; запитів до внутрішнього сервісу: 1 ['/internal-admin']"
+  },
+  {
+   "id": "F-12",
+   "owasp": "A06:2025",
+   "title": "Небезпечний дизайн: кількість товару = -100",
+   "status": "VULNERABLE",
+   "evidence": "PUT /api/BasketItems/9 quantity=-100 → HTTP 200"
+  },
+  {
+   "id": "F-13",
+   "owasp": "A08:2025",
+   "title": "Підроблений JWT з alg=none приймається (обхід автентифікації)",
+   "status": "VULNERABLE",
+   "evidence": "GET /rest/user/authentication-details з alg=none → HTTP 200"
+  },
+  {
+   "id": "F-14",
+   "owasp": "A04:2025",
+   "title": "JWT, підписаний ключем із публічного коду (зашитий секрет)",
+   "status": "VULNERABLE",
+   "evidence": "підписано ключем з insecurity.js → HTTP 200"
+  },
+  {
+   "id": "F-16",
+   "owasp": "A01:2025",
+   "title": "Відкритий редирект /redirect?to=… на сторонній домен",
+   "status": "VULNERABLE",
+   "evidence": "HTTP 302; Location: https://evil.example/?x=https://github.c"
+  },
+  {
+   "id": "F-15",
+   "owasp": "A07:2025",
+   "title": "Слабкий стандартний пароль адміністратора (admin123)",
+   "status": "VULNERABLE",
+   "evidence": "вхід admin@juice-sh.op з паролем зі словника → HTTP 200"
+  }
+ ],
+ "regression": {
+  "login": 200,
+  "search": 200,
+  "search_n": 3,
+  "own_basket": 200
+ }
+}

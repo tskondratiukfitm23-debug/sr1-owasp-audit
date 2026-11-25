@@ -1,0 +1,184 @@
+--- a/build/routes/login.js
++++ b/build/routes/login.js
+@@ -52,7 +52,7 @@
+         basket_1.BasketModel.findOrCreate({ where: { UserId: user.id } })
+             .then(([basket]) => {
+             const authenticatedUser = { data: user, bid: basket.id }; // keep track of original basket
+-            const token = security.authorize(authenticatedUser);
++            const token = security.authorize({ data: { ...user, password: undefined, totpSecret: undefined }, bid: basket.id }); /* SR1-FIX F-06: без хешу пароля у JWT */
+             security.authenticatedUsers.put(token, authenticatedUser);
+             res.json({ authentication: { token, bid: basket.id, umail: user.email } });
+         }).catch((error) => {
+@@ -61,7 +61,7 @@
+     }
+     return (req, res, next) => {
+         verifyPreLoginChallenges(req); // vuln-code-snippet hide-line
+-        models.sequelize.query(`SELECT * FROM Users WHERE email = '${req.body.email || ''}' AND password = '${security.hash(req.body.password || '')}' AND deletedAt IS NULL`, { model: user_1.UserModel, plain: true }) // vuln-code-snippet vuln-line loginAdminChallenge loginBenderChallenge loginJimChallenge
++        models.sequelize.query('SELECT * FROM Users WHERE email = $email AND password = $pw AND deletedAt IS NULL', { bind: { email: String(req.body.email || ''), pw: security.hash(String(req.body.password || '')) }, model: user_1.UserModel, plain: true }) /* SR1-FIX F-01: bind-параметри замість конкатенації */ // vuln-code-snippet vuln-line loginAdminChallenge loginBenderChallenge loginJimChallenge
+             .then((authenticatedUser) => {
+             const user = utils.queryResultToJson(authenticatedUser);
+             if (user.data?.id && user.data.totpSecret !== '') {
+--- a/build/routes/search.js
++++ b/build/routes/search.js
+@@ -50,7 +50,7 @@
+     return (req, res, next) => {
+         let criteria = req.query.q === 'undefined' ? '' : req.query.q ?? '';
+         criteria = (criteria.length <= 200) ? criteria : criteria.substring(0, 200);
+-        models.sequelize.query(`SELECT * FROM Products WHERE ((name LIKE '%${criteria}%' OR description LIKE '%${criteria}%') AND deletedAt IS NULL) ORDER BY name`) // vuln-code-snippet vuln-line unionSqlInjectionChallenge dbSchemaChallenge
++        models.sequelize.query("SELECT * FROM Products WHERE ((name LIKE $c OR description LIKE $c) AND deletedAt IS NULL) ORDER BY name", { bind: { c: '%' + String(criteria) + '%' } }) /* SR1-FIX F-02 */ // vuln-code-snippet vuln-line unionSqlInjectionChallenge dbSchemaChallenge
+             .then(([products]) => {
+             const dataString = JSON.stringify(products);
+             if (challengeUtils.notSolved(datacache_1.challenges.unionSqlInjectionChallenge)) { // vuln-code-snippet hide-start
+--- a/build/routes/basket.js
++++ b/build/routes/basket.js
+@@ -48,6 +48,8 @@
+     return async (req, res, next) => {
+         try {
+             const id = req.params.id;
++            const owner = security.authenticatedUsers.from(req); /* SR1-FIX F-04: IDOR */
++            if (!owner || Number(owner.bid) !== Number(id)) { res.status(403).json({ error: 'Forbidden' }); return; }
+             const basket = await basket_1.BasketModel.findOne({ where: { id }, include: [{ model: product_1.ProductModel, paranoid: false, as: 'Products' }] });
+             /* jshint eqeqeq:false */
+             challengeUtils.solveIf(datacache_1.challenges.basketAccessChallenge, () => {
+--- a/build/routes/basketItems.js
++++ b/build/routes/basketItems.js
+@@ -73,6 +73,7 @@
+                 BasketId: basketIds[basketIds.length - 1],
+                 quantity: quantities[quantities.length - 1]
+             };
++            if (!Number.isInteger(Number(basketItem.quantity)) || Number(basketItem.quantity) < 1) { res.status(400).json({ error: 'Invalid quantity' }); return; } /* SR1-FIX F-12 */
+             challengeUtils.solveIf(datacache_1.challenges.basketManipulateChallenge, () => { return user && basketItem.BasketId && basketItem.BasketId !== 'undefined' && user.bid != basketItem.BasketId; }); // eslint-disable-line eqeqeq
+             const basketItemInstance = basketitem_1.BasketItemModel.build(basketItem);
+             try {
+@@ -116,6 +117,8 @@
+     };
+ }
+ async function quantityCheck(req, res, next, id, quantity) {
++    const q = Number(quantity); /* SR1-FIX F-12: валідація кількості */
++    if (!Number.isInteger(q) || q < 1 || q > 100) { res.status(400).json({ error: 'Invalid quantity' }); return; }
+     const product = await quantity_1.QuantityModel.findOne({ where: { ProductId: id } });
+     if (product == null) {
+         throw new Error('No such product found!');
+--- a/build/routes/profileImageUrlUpload.js
++++ b/build/routes/profileImageUrlUpload.js
+@@ -48,6 +48,20 @@
+ const user_1 = require("../models/user");
+ const utils = __importStar(require("../lib/utils"));
+ const logger_1 = __importDefault(require("../lib/logger"));
++/* SR1-FIX F-11: дозволяємо лише http(s) на публічні адреси (без loopback/RFC1918/link-local) */
++const dns_1 = require("node:dns");
++const net_1 = require("node:net");
++function isPrivateIp(ip) {
++    if (net_1.isIPv6(ip)) { const v = ip.toLowerCase(); if (v.startsWith('::ffff:')) return isPrivateIp(v.slice(7)); return v === '::1' || v === '::' || v.startsWith('fc') || v.startsWith('fd') || v.startsWith('fe80'); }
++    const p = ip.split('.').map(Number);
++    return p[0] === 10 || p[0] === 127 || p[0] === 0 || (p[0] === 169 && p[1] === 254) || (p[0] === 172 && p[1] >= 16 && p[1] <= 31) || (p[0] === 192 && p[1] === 168) || (p[0] === 100 && p[1] >= 64 && p[1] <= 127);
++}
++async function assertSafeUrl(raw) {
++    const u = new URL(raw);
++    if (!['http:', 'https:'].includes(u.protocol)) throw new Error('scheme not allowed');
++    const addrs = await dns_1.promises.lookup(u.hostname, { all: true });
++    if (addrs.length === 0 || addrs.some(a => isPrivateIp(a.address))) throw new Error('internal address not allowed');
++}
+ function profileImageUrlUpload() {
+     return async (req, res, next) => {
+         if (req.body.imageUrl !== undefined) {
+@@ -56,6 +70,7 @@
+                 req.app.locals.abused_ssrf_bug = true;
+             const loggedInUser = security.authenticatedUsers.get(req.cookies.token);
+             if (loggedInUser) {
++                try { await assertSafeUrl(url); } catch (e) { logger_1.default.warn(`SSRF blocked: ${utils.getErrorMessage(e)}`); res.status(400).json({ error: 'URL not allowed' }); return; }
+                 try {
+                     const response = await fetch(url);
+                     if (!response.ok || !response.body) {
+--- a/build/lib/insecurity.js
++++ b/build/lib/insecurity.js
+@@ -52,7 +52,25 @@
+ // @ts-expect-error FIXME no typescript definitions for z85 :(
+ const z85 = __importStar(require("z85"));
+ exports.publicKey = node_fs_1.default ? node_fs_1.default.readFileSync('encryptionkeys/jwt.pub', 'utf8') : 'placeholder-public-key';
+-const privateKey = '<REDACTED: RSA-ключ, опублікований у вихідному коді Juice Shop>';
++/* SR1-FIX F-14: приватний ключ JWT більше не зашитий у код — читається з файлу поза репозиторієм */
++const privateKey = node_fs_1.default.readFileSync(process.env.JWT_PRIVATE_KEY_FILE || 'encryptionkeys/jwt.key', 'utf8');
++exports.publicKey = node_crypto_1.default.createPublicKey(privateKey).export({ type: 'spki', format: 'pem' }).toString();
++/* SR1-FIX F-13: сувора перевірка JWT — лише RS256, перевірка підпису та строку дії (alg=none відхиляється) */
++function strictVerify(token) {
++    try {
++        const t = String(token || '').replace(/^"|"$/g, '');
++        const [h, p, sig] = t.split('.');
++        if (!h || !p || !sig) return null;
++        const header = JSON.parse(Buffer.from(h, 'base64url').toString());
++        if (header.alg !== 'RS256') return null;
++        const ok = node_crypto_1.default.verify('RSA-SHA256', Buffer.from(h + '.' + p), exports.publicKey, Buffer.from(sig, 'base64url'));
++        if (!ok) return null;
++        const payload = JSON.parse(Buffer.from(p, 'base64url').toString());
++        if (payload.exp && payload.exp * 1000 < Date.now()) return null;
++        return payload;
++    } catch (e) { return null; }
++}
++exports.strictVerify = strictVerify;
+ const hash = (data) => node_crypto_1.default.createHash('md5').update(data).digest('hex');
+ exports.hash = hash;
+ const hmac = (data) => node_crypto_1.default.createHmac('sha256', 'pa4qacea4VK9t9nGv7yZtwmj').update(data).digest('hex');
+@@ -65,13 +83,13 @@
+     return str;
+ };
+ exports.cutOffPoisonNullByte = cutOffPoisonNullByte;
+-const isAuthorized = () => (0, express_jwt_1.default)(({ secret: exports.publicKey }));
++const isAuthorized = () => (req, res, next) => { const d = strictVerify(utils.jwtFrom(req)); if (d) { req.user = d; next(); } else { res.status(401).json({ error: 'Unauthorized' }); } }; /* SR1-FIX F-13 */
+ exports.isAuthorized = isAuthorized;
+ const denyAll = () => (0, express_jwt_1.default)({ secret: '' + Math.random() });
+ exports.denyAll = denyAll;
+ const authorize = (user = {}) => jsonwebtoken_1.default.sign(user, privateKey, { expiresIn: '6h', algorithm: 'RS256' });
+ exports.authorize = authorize;
+-const verify = (token) => token ? jws_1.default.verify(token, exports.publicKey) : false;
++const verify = (token) => token ? strictVerify(token) !== null : false; /* SR1-FIX F-13 */
+ exports.verify = verify;
+ const decode = (token) => { return jws_1.default.decode(token)?.payload; };
+ exports.decode = decode;
+@@ -154,7 +172,7 @@
+ const isRedirectAllowed = (url) => {
+     let allowed = false;
+     for (const allowedUrl of exports.redirectAllowlist) {
+-        allowed = allowed || url.includes(allowedUrl); // vuln-code-snippet vuln-line redirectChallenge
++        allowed = allowed || url === allowedUrl; /* SR1-FIX F-16: точний збіг з allowlist замість includes() */
+     }
+     return allowed;
+ };
+@@ -208,12 +226,11 @@
+ const updateAuthenticatedUsers = () => (req, res, next) => {
+     const token = req.cookies.token || utils.jwtFrom(req);
+     if (token && exports.authenticatedUsers.get(token) === undefined) {
+-        jsonwebtoken_1.default.verify(token, exports.publicKey, (err, decoded) => {
+-            if (err === null && decoded?.data !== undefined) {
+-                exports.authenticatedUsers.put(token, decoded);
+-                res.cookie('token', token);
+-            }
+-        });
++        const decoded = strictVerify(token); /* SR1-FIX F-13 */
++        if (decoded?.data !== undefined) {
++            exports.authenticatedUsers.put(token, decoded);
++            res.cookie('token', token, { httpOnly: false, secure: true, sameSite: 'strict' });
++        }
+     }
+     next();
+ };
+--- a/build/server.js
++++ b/build/server.js
+@@ -394,7 +394,7 @@
+     /* Feedbacks: GET allowed for feedback carousel, POST allowed in order to provide feedback without being logged in */
+     app.use('/api/Feedbacks/:id', security.isAuthorized());
+     /* Users: Only POST is allowed in order to register a new user */
+-    app.get('/api/Users', security.isAuthorized());
++    app.get('/api/Users', security.isAuthorized(), (req, res, next) => { const u = security.authenticatedUsers.from(req); if (u?.data?.role === 'admin') { next(); } else { res.status(403).json({ error: 'Forbidden' }); } }); /* SR1-FIX F-05 */
+     app.route('/api/Users/:id')
+         .get(security.isAuthorized())
+         .put(security.denyAll())
+@@ -688,7 +688,7 @@
+     app.use(utils.asyncHandler((0, angular_1.serveAngularClient)()));
+     /* Error Handling */
+     app.use(verify.errorHandlingChallenge());
+-    app.use(errorhandler());
++    app.use((err, req, res, next) => { logger_1.default.error(`Unhandled error ${req.method} ${req.path}: ${utils.getErrorMessage(err)}`); res.status(err.status || 500).json({ error: 'Internal error', ref: Date.now().toString(36) }); }); /* SR1-FIX F-03: без стеку/SQL у відповіді */
+ }
+ // Function called first to ensure that all the i18n files are reloaded successfully before other linked operations.
+ if (process.env.NODE_ENV !== 'test') {

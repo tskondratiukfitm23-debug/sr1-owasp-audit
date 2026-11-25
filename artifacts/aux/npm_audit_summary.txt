@@ -1,0 +1,26 @@
+npm audit --omit=dev  (OWASP Juice Shop 20.4.0, production-залежності: 515 )
+Вразливих пакетів: {'info': 0, 'low': 2, 'moderate': 7, 'high': 8, 'critical': 6, 'total': 23}
+
+crypto-js             critical  <=4.1.1         crypto-js PBKDF2 1,000 times weaker than specified in 1993 and 1.3M ti
+jsonwebtoken          critical  <=8.5.1         Verification Bypass in jsonwebtoken
+lodash                critical  <=4.17.20       Prototype Pollution in lodash
+marsdb                critical  *               Command Injection in marsdb
+pdfkit                critical  0.9.0 - 0.12.1  transitive via crypto-js
+tar                   critical  <=7.5.20        node-tar Vulnerable to Arbitrary File Creation/Overwrite via Hardlink 
+cacache               high      14.0.0 - 18.0.4 transitive via tar
+express-jwt           high      <=7.7.7         Authorization bypass in express-jwt
+jws                   high      <=3.2.2         Forgeable Public/Private Tokens in jws
+make-fetch-happen     high      7.1.1 - 14.0.0  transitive via cacache, http-proxy-agent
+moment                high      <=2.29.1        Regular Expression Denial of Service in moment
+node-gyp              high      <=10.3.1        transitive via make-fetch-happen, tar
+sanitize-html         high      <=2.17.7        Improper Input Validation in sanitize-html
+sqlite3               high      5.0.0 - 5.1.7   transitive via node-gyp, tar
+base64url             moderate  <3.0.0          Out-of-bounds Read in base64url
+file-type             moderate  13.0.0 - 21.3.0 file-type affected by infinite loop in ASF parser on malformed input w
+hbs                   moderate  *               hbs: Insertion of Sensitive Information into Externally-Accessible Fil
+jwa                   moderate  <=1.1.5         transitive via base64url
+notevil               moderate  *               Sandbox escape in notevil and argencoders-notevil
+sequelize             moderate  0.0.0-development || >=3.30.1transitive via uuid
+uuid                  moderate  <11.1.1         uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided
+@tootallnate/once     low       <2.0.1          @tootallnate/once vulnerable to Incorrect Control Flow Scoping
+http-proxy-agent      low       4.0.1           transitive via @tootallnate/once

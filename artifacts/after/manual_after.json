@@ -1,0 +1,124 @@
+{
+ "target": "https://localhost:8443",
+ "time": "2026-11-25 21:36:00",
+ "results": [
+  {
+   "id": "F-01",
+   "owasp": "A05:2025",
+   "title": "SQL-ін'єкція у вході (email=' OR 1=1--)",
+   "status": "FIXED",
+   "evidence": "HTTP 401; вхід відхилено"
+  },
+  {
+   "id": "F-02",
+   "owasp": "A05:2025",
+   "title": "UNION SQLi у /rest/products/search (витік облікових записів)",
+   "status": "FIXED",
+   "evidence": "HTTP 200; отримано 0 e-mail та хешів паролів з таблиці Users"
+  },
+  {
+   "id": "F-03",
+   "owasp": "A10:2025",
+   "title": "Витік деталей винятку (SQL/стек) у відповіді",
+   "status": "FIXED",
+   "evidence": "HTTP 200; загальне повідомлення без деталей"
+  },
+  {
+   "id": "F-04",
+   "owasp": "A01:2025",
+   "title": "IDOR: користувач A читає кошик користувача B",
+   "status": "FIXED",
+   "evidence": "GET /rest/basket/7 з токеном A → HTTP 403"
+  },
+  {
+   "id": "F-05",
+   "owasp": "A01:2025",
+   "title": "Покупець отримує список усіх користувачів (/api/Users)",
+   "status": "FIXED",
+   "evidence": "HTTP 403; записів: 0"
+  },
+  {
+   "id": "F-06",
+   "owasp": "A04:2025",
+   "title": "JWT містить хеш пароля (MD5) у payload",
+   "status": "FIXED",
+   "evidence": "поле data.password відсутнє"
+  },
+  {
+   "id": "F-07",
+   "owasp": "A07:2025",
+   "title": "Підбір пароля: 30 невдалих спроб поспіль",
+   "status": "FIXED",
+   "evidence": "401: 1, 429: 29, інші: 0"
+  },
+  {
+   "id": "F-08",
+   "owasp": "A02:2025",
+   "title": "Лістинг /ftp та доступ до acquisitions.md",
+   "status": "FIXED",
+   "evidence": "/ftp → 403; /ftp/acquisitions.md → 403"
+  },
+  {
+   "id": "F-09",
+   "owasp": "A02:2025",
+   "title": "Публічні службові ендпоінти (логи, метрики, API-docs, ключі)",
+   "status": "FIXED",
+   "evidence": "/support/logs→403, /metrics→403, /api-docs/→403, /encryptionkeys→403"
+  },
+  {
+   "id": "F-10",
+   "owasp": "A02:2025",
+   "title": "Відсутні заголовки безпеки / CORS *",
+   "status": "FIXED",
+   "evidence": "немає: —; ACAO: (не задано); HTTPS: True"
+  },
+  {
+   "id": "F-11",
+   "owasp": "A01:2025",
+   "title": "SSRF: сервер звертається на внутрішню адресу 127.0.0.1",
+   "status": "FIXED",
+   "evidence": "HTTP 400; запитів до внутрішнього сервісу: 0 []"
+  },
+  {
+   "id": "F-12",
+   "owasp": "A06:2025",
+   "title": "Небезпечний дизайн: кількість товару = -100",
+   "status": "FIXED",
+   "evidence": "PUT /api/BasketItems/9 quantity=-100 → HTTP 400"
+  },
+  {
+   "id": "F-13",
+   "owasp": "A08:2025",
+   "title": "Підроблений JWT з alg=none приймається (обхід автентифікації)",
+   "status": "FIXED",
+   "evidence": "GET /rest/user/authentication-details з alg=none → HTTP 401"
+  },
+  {
+   "id": "F-14",
+   "owasp": "A04:2025",
+   "title": "JWT, підписаний ключем із публічного коду (зашитий секрет)",
+   "status": "FIXED",
+   "evidence": "підписано ключем з insecurity.js → HTTP 401"
+  },
+  {
+   "id": "F-16",
+   "owasp": "A01:2025",
+   "title": "Відкритий редирект /redirect?to=… на сторонній домен",
+   "status": "FIXED",
+   "evidence": "HTTP 500; Location: —"
+  },
+  {
+   "id": "F-15",
+   "owasp": "A07:2025",
+   "title": "Слабкий стандартний пароль адміністратора (admin123)",
+   "status": "FIXED",
+   "evidence": "вхід admin@juice-sh.op з паролем зі словника → HTTP 401"
+  }
+ ],
+ "regression": {
+  "login": 200,
+  "search": 200,
+  "search_n": 3,
+  "own_basket": 200
+ }
+}

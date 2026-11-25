@@ -1,0 +1,19 @@
+risk,confidence,name,plugin,cwe,owasp2025,count,url,param,evidence
+High,Medium,Off-site Redirect,10028,601,A01,1,http://localhost:3000/redirect?to=https://github.com/juice-shop/juice-shop,to,
+Medium,High,Content Security Policy (CSP) Header Not Set,10038,693,A02,5,http://localhost:3000,,
+Medium,Medium,Cross-Domain Misconfiguration,10098,264,A01,5,http://localhost:3000/assets/public/favicon_js.ico,,Access-Control-Allow-Origin: *
+Medium,Medium,Missing Anti-clickjacking Header,10020,1021,A02,3,http://localhost:3000/socket.io/?EIO=4&transport=polling&t=ml3mpxht&sid=3VZMOlYkNl7g5nHHAAAA,x-frame-options,
+Medium,High,Session ID in URL Rewrite,3,598,A01,5,http://localhost:3000/socket.io/?EIO=4&transport=polling&t=ml3mso9x&sid=3VZMOlYkNl7g5nHHAAAA,sid,3VZMOlYkNl7g5nHHAAAA
+Low,Medium,Application Error Disclosure,90022,550,A10,1,http://localhost:3000/rest/user/reset-password,,HTTP/1.1 500 Internal Server Error
+Low,Medium,Cross-Origin-Embedder-Policy Header Missing or Invalid,90004,693,A02,5,http://localhost:3000,Cross-Origin-Embedder-Policy,
+Low,Medium,Cross-Origin-Opener-Policy Header Missing or Invalid,90004,693,A02,5,http://localhost:3000,Cross-Origin-Opener-Policy,
+Low,Low,Dangerous JS Functions,10110,749,A05,3,http://localhost:3000/about.component-HWmrgSem.js,,bypassSecurityTrustHtml(
+Low,Medium,Deprecated Feature Policy Header Set,10063,16,A02,5,http://localhost:3000/chunk-CE5v8pBj.js,,Feature-Policy
+Low,Medium,Private IP Disclosure,2,497,A02,1,http://localhost:3000/rest/admin/application-configuration,,192.168.99.100:3000
+Low,Low,Timestamp Disclosure - Unix,10096,497,A02,4,http://localhost:3000/rest/admin/application-configuration,,1969196030
+Low,Medium,X-Content-Type-Options Header Missing,10021,693,A02,5,http://localhost:3000/socket.io/?EIO=4&transport=polling&t=ml3mso9x&sid=3VZMOlYkNl7g5nHHAAAA,x-content-type-options,
+Informational,High,Information Disclosure - Information in Browser sessionStorage,120000,359,A06,1,http://localhost:3000/#/basket,itemTotal,
+Informational,Medium,Information Disclosure - Sensitive Information in URL,10024,598,A01,1,http://localhost:3000/rest/user/security-question?email=foo-bar@example.com,email,foo-bar@example.com
+Informational,Medium,Modern Web Application,10109,-1,—,5,http://localhost:3000,,"<script>     window.addEventListener(""load"", function(){       window.cookiecons"
+Informational,Medium,Storable and Cacheable Content,10049,524,A02,1,http://localhost:3000/robots.txt,,
+Informational,Medium,Storable but Non-Cacheable Content,10049,524,A02,5,http://localhost:3000/assets/public/favicon_js.ico,,max-age=0

@@ -1,0 +1,130 @@
+- Nikto v2.6.1
+---------------------------------------------------------------------------
++ Target IP:          127.0.0.1
++ Target Hostname:    localhost
++ Target Port:        8443
+---------------------------------------------------------------------------
++ SSL Info:           Subject:  /CN=juice.lab.local
+                      CN:       juice.lab.local
+                      SAN:      localhost
+                      Ciphers:  TLS_AES_256_GCM_SHA384
+                      Issuer:   /CN=juice.lab.local
++ Platform:           Unknown
++ Start Time:         2026-11-25 21:43:04 (GMT0)
+---------------------------------------------------------------------------
++ Server: nginx
++ Multiple IPs found: 127.0.0.1, ::1
++ [999996] /robots.txt: contains 1 entry which should be manually viewed. See: https://developer.mozilla.org/en-US/docs/Glossary/Robots.txt
++ No CGI Directories found (use '-C all' to force check all possible dirs). CGI tests skipped.
++ [000120] /vgn/vr/Select: Vignette CMS admin/maintenance script available.
++ [000131] /SiteServer/Admin/commerce/foundation/driver.asp: Displays a list of installed ODBC drivers. See: https://nvd.nist.gov/vuln/detail/CVE-2002-1769
++ [000133] /SiteServer/admin/findvserver.asp: Gives a list of installed Site Server components. See: https://nvd.nist.gov/vuln/detail/CVE-2002-1769
++ [000140] /clusterframe.jsp: Macromedia JRun 4 build 61650 remote administration interface is vulnerable to several XSS attacks.
++ [000149] /prd.i/pgen/: Has MS Merchant Server 1.0.
++ [000200] /administrator/gallery/uploadimage.php: Mambo PHP Portal/Server 4.0.12 BETA and below may allow upload of any file type simply putting '.jpg' before the real file extension.
++ [000207] /upload.asp: An ASP page that allows attackers to upload files to server.
++ [000215] /vgn/ac/data: Vignette CMS admin/maintenance script available.
++ [000225] /vgn/errors: Vignette CMS admin/maintenance script available.
++ [000233] /vgn/jsp/style: Vignette CMS admin/maintenance script available.
++ [000240] /fpdb/shop.mdb: MetaCart2 is an ASP shopping cart. The database of customers is available via the web. See: https://packetstormsecurity.com/files/32406/xmas.txt.html
++ [000248] /shopping300.mdb: VP-ASP shopping cart application allows .mdb files (which may include customer data) to be downloaded via the web. These should not be available. See: https://securitytracker.com/id/1004382
++ [000258] /adm/config.php: PHP Config file may contain database IDs and passwords.
++ [000258] /administrator/config.php: PHP Config file may contain database IDs and passwords.
++ [000297] /cms/typo3conf/database.sql: TYPO3 SQL file found.
++ [000298] /typo3/typo3conf/localconf.php: TYPO3 config file found.
++ [000306] /webcart/config/: This may allow attackers to read credit card data. Reconfigure to make this dir not accessible via the web. See: https://packetstormsecurity.com/files/32406/xmas.txt.html
++ [000358] /quikstore.cfg: Shopping cart config file, http://www.quikstore.com/, http://www.mindsec.com/advisories/post2.txt. See: https://nvd.nist.gov/vuln/detail/CVE-1999-0607
++ [000368] /nsn/..%5Cutil/chkvol.bas: Netbase util access is possible which means that several utility scripts might be run (including directory listings, NDS tree enumeration and running .bas files on server.
++ [000380] /nsn/..%5Cutil/slist.bas: Netbase util access is possible which means that several utility scripts might be run (including directory listings, NDS tree enumeration and running .bas files on server.
++ [000518] /................../config.sys: PWS allows files to be read by prepending multiple '.' characters. At worst, IIS, not PWS, should be used.
++ [000952] /cbms/passgen.php: CBMS Billing Management has had many vulnerabilities in versions 0.7.1 and below. None could be confirmed here, but they should be manually checked if possible. http://freshmeat.net/projects/cbms/.
++ [000954] /cbms/usersetup.php: CBMS Billing Management has had many vulnerabilities in versions 0.7.1 and below. None could be confirmed here, but they should be manually checked if possible. http://freshmeat.net/projects/cbms/.
++ [000986] /Admin_files/order.log: Selena Sol's WebStore 1.0 exposes order information. See: https://packetstormsecurity.com/files/32406/xmas.txt.html
++ [000991] /cgi-bin/MachineInfo: Gives out information on the machine.
++ [001085] /admin/admin_phpinfo.php4: Mon Album version 0.6.2d allows remote admin access. This should be protected.
++ [001086] /admin/login.php?action=insert&username=test&password=test: phpAuction may allow user admin accounts to be inserted without proper authentication. Attempt to log in with user 'test' password 'test' to verify. See: https://nvd.nist.gov/vuln/detail/CVE-2002-0995
++ [001091] /dostuff.php?action=modify_user: Blahz-DNS allows unauthorized users to edit user information. Upgrade to version 0.25 or higher. See: https://nvd.nist.gov/vuln/detail/CVE-2002-0599,https://sourceforge.net/projects/blahzdns/
++ [001127] /logs/str_err.log: Bmedia error log, contains invalid login attempts which include the invalid usernames and passwords entered (could just be typos & be very close to the right entries).
++ [001198] /_vti_pvt/access.cnf: Contains HTTP server-specific access control information. Remove or ACL if FrontPage is not being used. See: https://nvd.nist.gov/vuln/detail/CVE-2002-1717
++ [001259] /level/16/level/16/exec//show/interfaces: CISCO HTTP service allows remote execution of commands. See: https://nvd.nist.gov/vuln/detail/CVE-2001-0537
++ [001266] /level/19/exec//show: CISCO HTTP service allows remote execution of commands. See: https://nvd.nist.gov/vuln/detail/CVE-2001-0537
++ [001268] /level/21/exec//show: CISCO HTTP service allows remote execution of commands. See: https://nvd.nist.gov/vuln/detail/CVE-2001-0537
++ [001279] /level/32/exec//show: CISCO HTTP service allows remote execution of commands. See: https://nvd.nist.gov/vuln/detail/CVE-2001-0537
++ [001290] /level/43/exec//show: CISCO HTTP service allows remote execution of commands. See: https://nvd.nist.gov/vuln/detail/CVE-2001-0537
++ [001298] /level/51/exec//show: CISCO HTTP service allows remote execution of commands. See: https://nvd.nist.gov/vuln/detail/CVE-2001-0537
++ [001302] /level/55/exec//show: CISCO HTTP service allows remote execution of commands. See: https://nvd.nist.gov/vuln/detail/CVE-2001-0537
++ [001311] /level/64/exec//show: CISCO HTTP service allows remote execution of commands. See: https://nvd.nist.gov/vuln/detail/CVE-2001-0537
++ [001325] /level/78/exec//show: CISCO HTTP service allows remote execution of commands. See: https://nvd.nist.gov/vuln/detail/CVE-2001-0537
++ [001333] /level/86/exec//show: CISCO HTTP service allows remote execution of commands. See: https://nvd.nist.gov/vuln/detail/CVE-2001-0537
++ [001352] /users.lst: LocalWEB2000 users.lst passwords found. See: https://nvd.nist.gov/vuln/detail/CVE-2002-1353
++ [001373] //admin/admin.shtml: Axis network camera may allow admin bypass by using double-slashes before URLs. See: https://nvd.nist.gov/vuln/detail/CVE-2003-0240
++ [001405] /upload.cgi: The upload.cgi allows attackers to upload arbitrary files to the server. See: https://web.archive.org/web/20030509134940/http://www.securityfocus.com/archive/1/314389
++ [001493] /iisadmpwd/aexp2b.htr: Gives domain and system name, may allow an attacker to brute force for access. Also will allow an NT4 user to change his password regardless of the 'user cannot change password' security policy. See: https://nvd.nist.gov/vuln/detail/CVE-1999-0407
++ [001514] /buddies.blt: Buddy List?.
++ [001538] /access.log: This might be interesting.
++ [001547] /admin.html: This might be interesting.
++ [001607] /cfdocs/exampleapp/publish/admin/addcontent.cfm: This might be interesting.
++ [001743] /manage/cgi/cgiproc: This might be interesting.
++ [001778] /orders/orders.txt: Seen in carding forums. See: https://packetstormsecurity.com/files/32406/xmas.txt.html
++ [001818] /pwd.db: This might be interesting.
++ [001836] /scratch: This might be interesting.
++ [001838] /search.vts: This might be interesting.
++ [002078] /carbo.dll: This might be interesting.
++ [002091] /scripts/samples/ctguestb.idc: This might be interesting.
++ [002268] /acartpath/signin.asp?|-|0|404_Object_Not_Found: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002282] /admin/script.php: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002300] /biztalktracking/rawdocdata.asp?|-|0|404_Object_Not_Found: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002311] /community/index.php?analized=anything: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002325] /dbabble: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002331] /dotproject/modules/files/index_table.php: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002337] /do_map: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002347] /ez2000/ezboard.cgi: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002354] /filemgmt/visit.php: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002388] /forum/newreply.php: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002476] /homebet/homebet.dll?form=menu&amp;option=menu-signin: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002509] /ixmail_netattach.php: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002523] /members/ID.pm: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002547] /moregroupware/modules/webmail2/inc/: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002563] /poppassd.php3+: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002622] /site/typo3/dev/translations.php: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002638] /XMBforum/member.php: This might be interesting: has been seen in web logs from an unknown scanner.
++ [002740] /.access: Contains authorization information.
++ [002751] /.plan: User home dir with a .plan, a now mostly outdated file for delivering information via the finger protocol.
++ [002821] /bin/fpsrvadm.exe: Default FrontPage CGI found. See: https://en.wikipedia.org/wiki/Microsoft_FrontPage
++ [002836] /scripts/fpsrvadm.exe: Default FrontPage CGI found. See: https://en.wikipedia.org/wiki/Microsoft_FrontPage
++ [002851] /_vti_bin/fpremadm.exe: Default FrontPage CGI found. See: https://en.wikipedia.org/wiki/Microsoft_FrontPage
++ [002946] /index.html.dk: Apache default foreign language file found. All default files should be removed from the web server as they may give an attacker additional system information. See: CWE-552
++ [002963] /index.html.po.iso8859-2: Apache default foreign language file found. All default files should be removed from the web server as they may give an attacker additional system information. See: CWE-552
++ [002979] /iissamples/sdk/asp/docs/codebrw2.asp: This is a default IIS script/file that should be removed. See: https://nvd.nist.gov/vuln/detail/CVE-1999-0739,https://docs.microsoft.com/en-us/security-updates/securitybulletins/2099/MS99-013
++ [003027] /general.chl+: Abyss allows hidden/protected files to be served if a + is added to the request. See: https://nvd.nist.gov/vuln/detail/CVE-2002-1081
++ [003062] /php/mlog.phtml: Remote file read vulnerability 1999-0346. See: https://nvd.nist.gov/vuln/detail/CVE-1999-0068
++ [003136] /data/member_log.txt: Teekai's forum full 1.2 member's log can be retrieved remotely. See: https://nvd.nist.gov/vuln/detail/CVE-2002-2057
++ [003205] /Sites/Samples/Knowledge/Membership/Inspiredtutorial/ViewCode.asp: The default ViewCode.asp can allow an attacker to read any file on the machine. See: https://nvd.nist.gov/vuln/detail/CVE-1999-0737,https://docs.microsoft.com/en-us/security-updates/securitybulletins/2099/MS99-013
++ [003364] /..%255c..%255c..%255c..%255c..%255c../windows/repair/sam: BadBlue server is vulnerable to multiple remote exploits. See: https://nvd.nist.gov/vuln/detail/CVE-2002-0325
++ [003428] /OA_HTML/oam/weboam.log: Oracle log files. See: CWE-552
++ [003443] /servlets/weboam/oam/oamLogin: Oracle Application Manager. See: CWE-552
++ [003460] /pls/portal/PORTAL_DEMO.ORG_CHART.SHOW: Access to Oracle pages could have an unknown impact.
++ [003575] /xmlrpc.php: xmlrpc.php was found.
++ [006188] /LICENSE.TXT: License file found may identify site software.
++ [006221] /admin/controlpanel.asp: Admin login page/section found.
++ [006239] /admin2.php: Admin login page/section found.
++ [006321] /fileadmin.php: Admin login page/section found.
++ [006333] /login.php: Admin login page/section found.
++ [006346] /moderator.html: Admin login page/section found.
++ [006389] /sysadmin.html: Admin login page/section found.
++ [006415] /wordpress/wp-login/: Admin login page/section found.
++ [006686] /adfs/services/trust/2005/usernamemixed: Active Directory Federation Services page found. See: https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/ad-fs-overview
++ [006698] /adfs/services/trust/proxytrustprovisionusername: Active Directory Federation Services page found. See: https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/ad-fs-overview
++ [006762] /id_dsa: Encryption key exposed.
++ [006878] /_vti_bin/_vti_aut/author.exe: FrontPage/Sharepointfile available.
++ [006890] /_layouts/editgrp.aspx: FrontPage/Sharepointfile available.
++ [006906] /_layouts/MyTasks.aspx: FrontPage/Sharepointfile available.
++ [006921] /_layouts/quiklnch.aspx: FrontPage/Sharepointfile available.
++ [006934] /_layouts/userdisp.aspx?ID=1: FrontPage/Sharepointfile available.
++ [006951] /_catalogs/wp/Forms/AllItems.aspx: FrontPage/Sharepointfile available.
++ [007014] /wordpress/wp-content/plugins/gravityforms/change_log.txt: Gravity forms is installed. Based on the version number in the changelog, it is vulnerable to an authenticated SQL injection. https://wpvulndb.com/vulnerabilities/7849.
++ [007211] /users.json: This might be interesting.
++ 8057 requests: 0 errors and 109 items reported on the remote host
++ End Time:           2026-11-25 21:43:16 (GMT0) (12 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
